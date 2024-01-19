@@ -1,0 +1,129 @@
+/*
+Light gray - #f4f4f4	(244,244,244)
+Black - #060202	(6,2,2)
+Orange - #ff7400	(255,116,0)
+Dark gray - #696969	(105,105,105)
+Mid gray - #aba8a8	(171,168,168)
+
+font-family: 'Black Ops One', system-ui;
+font-family: 'Darker Grotesque', sans-serif;
+font-family: 'DotGothic16', sans-serif;
+font-family: 'Press Start 2P', system-ui;
+*/
+
+/* # Generic */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 16px;
+  font-family: 'Black Ops One', system-ui;
+  line-height: 1;
+  color: rgb(255, 116, 0);
+  background-color: rgb(6, 2, 2);
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+  padding-bottom: 10px;
+}
+
+.btn {
+  font-size: 24px;
+  font-family: 'Black Ops One', system-ui;
+  padding: 4px 20px 8px 20px;
+  margin-top: 5px;
+  /* width: 50%; */
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 2px solid rgb(255, 116, 0);
+  background-color: rgb(0, 0, 0);
+  color: rgb(244, 244, 244);
+}
+
+.btn:hover {
+  background-color: rgb(255, 116, 0);
+  border: 2px dashed rgb(244, 244, 244);
+  color: rgb(6, 2, 2);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  color: rgba(255, 116, 0, 0.8);
+  /* font-weight: 700; */
+}
+
+/* # Game grid */
+
+.game-board {
+  position: relative;
+  margin-bottom: 8px;
+  border: 2px solid rgb(105, 105, 105);
+}
+
+.game-container {
+  width: calc((48px * 6) + 4px);
+}
+
+.grid {
+  width: calc((48px * 6) + 4px);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  outline: 1px dotted rgb(171, 168, 168);
+}
+
+.bar {
+  background-color: rgb(255, 116, 0);
+  border-radius: 8px;
+  border: 2px solid rgb(248, 152, 27);
+}
+
+/* # Game over */
+.end-game-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(92, 81, 78, 0.8);
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 16px;
+}
+
+.win {
+  background-color: rgba(0, 255, 13, 0.5);
+}
+
+.end-game-text {
+  font-size: 60px;
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+}
+
+/* # Utilities */
+
+.hidden {
+  display: none;
+}
